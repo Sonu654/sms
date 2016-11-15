@@ -18,8 +18,4 @@
                 <div class="col-sm-2"></div>
             </div>
         </div>
-        <div class="col-sm-3">
-            <?php $this->view('feeds'); ?>
-        </div>
-    </div>
-</section>
+       
