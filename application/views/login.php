@@ -2,7 +2,7 @@
 
 echo validation_errors();
 
-echo form_open('login/validate');
+echo form_open('Home/loginValidate');
 
 $in = array(
     'name' => 'login_id',
