@@ -1,47 +1,52 @@
 <?php
 
 echo validation_errors();
-
 echo form_open('Home/loginValidate');
 
 $in = array(
     'name' => 'login_id',
-    'type'=>'email',
+    'type' => 'text',
     'id' => '',
     'value' => '',
-    'placeholder'=>'Email Address',
+    'placeholder' => 'Email Address',
     'maxlength' => '50',
-    'size'=>'',
-    'style'=>'',
-    'class'=>'form-control'
+    'size' => '',
+    'style' => '',
+    'class' => 'form-control'
 );
+
 echo '<h3 style="color:white; padding:15px;">Login Crediminal\'s</h3>';
+
+
+if (isset($_GET['error'])) {
+    echo "<div class='alert alert-danger'>" . $_GET['error'] . "</div>";
+}
 echo form_input($in);
 
 $in = array(
     'name' => 'password',
-    'type'=>'password',
+    'type' => 'password',
     'id' => '',
     'value' => '',
-    'placeholder'=>'Password',
+    'placeholder' => 'Password',
     'maxlength' => '20',
-    'size'=>'',
-    'style'=>'',
-    'class'=>'form-control'
+    'size' => '',
+    'style' => '',
+    'class' => 'form-control'
 );
 echo '<br>';
 echo form_input($in);
 
 $in = array(
     'name' => 'Button',
-    'type'=>'Submit',
+    'type' => 'Submit',
     'id' => '',
     'value' => 'Login',
-    'placeholder'=>'',
+    'placeholder' => '',
     'maxlength' => '20',
-    'size'=>'',
-    'style'=>'margin-left:70%; width:30%;',
-    'class'=>'btn btn-default'
+    'size' => '',
+    'style' => 'margin-left:70%; width:30%;',
+    'class' => 'btn btn-default'
 );
 echo '<br>';
 echo form_input($in);

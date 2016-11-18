@@ -104,12 +104,20 @@ echo doctype('html5');
             body {
                 font-family: "Lato";
             }
+            
+            #mid{
+                margin: 90px 0; 
+            }
+            
+            #lft_panel, #mid_panel, #rht_panel{
+               
+            }
         </style>
     </head>
     <body>
         <section id="header">
             <div class="example3">
-                <nav class="navbar navbar-inverse navbar-static-top">
+                <nav class="navbar navbar-inverse navbar-fixed-top">
                     <div class="container">
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
@@ -119,8 +127,8 @@ echo doctype('html5');
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-brand" href="<?php echo site_url(); ?>">
-                                <img src="<?php echo base_url(); ?>assets/Img/logo.png" alt="" class="img-responsive" style="display: inline-block;">
-                                <span style="display: inline-block;">Student Managemt System</span>
+                              <!--  <img src="<?php echo base_url(); ?>assets/Img/logo.png" alt="" class="img-responsive" style="display: inline-block;">
+                                <span style="display: inline-block;"></span>-->Student Managemt System
                             </a>
                         </div>
                       <!--  <div id="navbar3" class="navbar-collapse collapse">

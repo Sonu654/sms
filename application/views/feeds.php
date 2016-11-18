@@ -11,7 +11,7 @@ rssfeed_url[6]="http://www.computerweekly.com/rss/Networking-and-communication.x
 rssfeed_url[7]="http://www.computerweekly.com/rss/Mobile-technology.xml";
 rssfeed_url[8]="http://www.computerweekly.com/rss/Internet-technology.xml";
 rssfeed_frame_width="310"; 
-rssfeed_frame_height="550"; 
+rssfeed_frame_height="515"; 
 rssfeed_scroll="on"; 
 rssfeed_scroll_step="3"; 
 rssfeed_scroll_bar="on"; 
@@ -45,6 +45,6 @@ rssfeed_item_description_tag="off";
 rssfeed_no_items="0"; 
 rssfeed_cache = "b4e45b422a0bcedb3625cb60313ee7bd"; 
 </script> 
-<script type="text/javascript" src="<?php base_url() ?>assets/js/rss-feed.js"></script> 
+<script type="text/javascript" src="<?php echo base_url() ?>assets/js/rss-feed.js"></script> 
 <!- 
 <!-- end -rss-feed code -->
