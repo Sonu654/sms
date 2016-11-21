@@ -1,8 +1,6 @@
-<?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
+<div class="form-group">
+    <input type="text" id="searchBox" class="form-control" placeholder="Search Student by Registration No.\ Roll No.\ Name">
+    <div class="suggest" id='suggest'>
+        djfsdlkfhsdklh
+    </div>
+</div>

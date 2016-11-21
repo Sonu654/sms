@@ -1,7 +1,5 @@
 <?php
 
-defined('BASEPATH') OR exit('No direct script access allowed');
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -9,11 +7,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  */
 
 /**
- * Description of Admin
+ * Description of Faculty
  *
  * @author Sanwal
  */
-class Admin extends CI_Controller {
+class Faculty extends CI_Controller {
 
     function Index() {
         if (empty($this->session->userdata('id'))) {
@@ -32,6 +30,3 @@ class Admin extends CI_Controller {
 
     //
 }
-
-//put your code here
-
