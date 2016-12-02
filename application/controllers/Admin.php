@@ -20,7 +20,7 @@ class Admin extends CI_Controller {
             redirect('/');
         }
         $this->session->userdata('id');
-        $this->load->view('header');
+        $this->load->view('header',['title'=>'Dashboard']);
         //echo $_SESSION['id'];
         $data['left'] = 'Menu';
         $data['center'] = 'Dashboard';

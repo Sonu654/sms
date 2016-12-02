@@ -24,7 +24,15 @@ $(document).ready(function () {
         $('#suggest').css('display', 'none');
     });
     
-     $(document).on('focusout blur mouseleave', '#searchBox', function () {
-         $('#searchBox').css('margin-top','40px');
+     $(document).on('focusout blur submit select', '#searchBox', function () {
+         $(this).css('margin-top','40px');
+         $.ajax({
+             method:'post',
+             url:site_url+'/Home/getSearchResult',
+             data: {'content':$(this).val()}
+         })
+                 .done(function(data){
+                     $('#searchResult').html(data);
+                 });
      });
 });

@@ -82,7 +82,19 @@ class Validation extends CI_Model {
             }
         return $c;
     }
-
+    function getData($data){
+        $data = explode(' ',$data);
+        $q=$this->db->select(['roll','registration_no','firstName','lastName','midName'])
+                ->where('roll',$data[0])
+                ->or_where('registration_no',$data[0])
+                ->or_where('firstName',$data[0])
+                ->or_where('midName',@$data[1])
+                ->or_where('lastName',@$data[1])
+                ->or_where('lastName',@$data[2])
+                ->get('student');
+        return $q->result();
+    }
+    
     function searchT($content = 'u') {
         $this->db->select('type_id')
                 ->like('type_id', $content, 'after')

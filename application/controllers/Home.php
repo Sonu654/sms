@@ -20,7 +20,7 @@ class Home extends CI_Controller {
     public function Index() {
         // $this->load->helper('html');
 
-        $this->load->view('header');
+        $this->load->view('header', ['title' => 'Login']);
         $data['user'] = '';
         $data['userType'] = '';
         $data['left'] = 'login';
@@ -59,9 +59,36 @@ class Home extends CI_Controller {
         $this->load->model('validation', 'vi');
         $res = $this->vi->search($content);
         foreach ($res as $r) {
-            echo '<a id="sugresult">'.$r.'</a>';
+            echo '<a id="sugresult">' . $r . '</a>';
             echo '<br>';
         }
     }
 
+    function getSearchResult() {
+        $this->load->model('validation', 'vi');
+        //$daa = $this->input->post('content');
+        $daa=1611103;
+        $res = $this->vi->getData($daa);
+        echo '<table class="table table-responsive">'
+        . '<tr>'
+        . '<td>ROll</td>'
+        . '<td>Registation No</td>'
+        . '<td>Name</td>'
+        . '<td>view</td>'
+        . '</tr>';
+        foreach ($res as $r) {
+            echo '<tr>'
+            . '<td>'.$r->roll.'</td>'
+            . '<td>'.$r->registration_no.'</td>'
+            . '<td>'.$r->firstName.' '.$r->midName.' '.$r->lastName.'</td>'
+            . "<td><a href='". site_url('Student\View\\'.$r->roll)."'>view</a></td>"
+            . "</tr>";
+        }
+        echo '</table>';
+    }
+    
+    
+    function GnrateResult(){
+        
+    }
 }

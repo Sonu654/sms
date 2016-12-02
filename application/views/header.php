@@ -5,10 +5,11 @@ echo doctype('html5');
 <html>
     <head>
         <?php
+        echo '<title>'.$title.'</title>';
         echo meta('viewport', 'width=device-width, initial-scale=1.0');
         echo meta('name', 'Student Management System');
         echo meta('discription', 'Student management system is an application that manage the records of students.');
-
+            
 
         /*
          * To change this license header, choose License Headers in Project Properties.
@@ -36,7 +37,9 @@ echo doctype('html5');
 
             }
             *{
-                color:RED;
+                color:#fffff;
+                padding-top: 5px;
+                padding-left: 2px;
             }
 
             .navbar-brand {
@@ -96,6 +99,19 @@ echo doctype('html5');
             .suggest{
                 margin: 0 10%;
                 width:80%;
+                padding:0 10px;
+                color:black;
+                height: auto;
+                z-index: 9999;
+                border:1px solid  #CCCCCC;
+                -webkit-border-bottom-left-radius: 5px;
+                -webkit-border-bottom-right-radius: 5px;
+                display: none;
+            }
+            .searchResult{
+                border:solid 1px green;
+                margin: 0 5%;
+                width:90%;
                 padding:0 10px;
                 color:black;
                 height: auto;
