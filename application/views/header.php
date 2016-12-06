@@ -28,6 +28,11 @@ echo doctype('html5');
 
 
         <style type="text/css">
+            @media print{
+                #rht_panel{
+                    display: none;
+                }
+            }
             .navbar {
                 background-color:rgb(64, 64, 64);
                 background-image: none;
@@ -53,6 +58,7 @@ echo doctype('html5');
 
             #mid{
                 margin-top: 80px;
+                margin-bottom: 80px;
             }
 
             .leftNav{
@@ -141,7 +147,7 @@ echo doctype('html5');
                             </button>
                             <a class="navbar-brand" href="<?php echo site_url(); ?>">
                               <!--  <img src="<?php echo base_url(); ?>assets/Img/logo.png" alt="" class="img-responsive" style="display: inline-block;">
-                                <span style="display: inline-block;"></span>-->Student Managemt System
+                                <span style="display: inline-block;"></span>-->Student Management System
                             </a>
                         </div>
                     </div>

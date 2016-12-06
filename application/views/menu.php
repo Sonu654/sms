@@ -1,5 +1,8 @@
+<?php  if(empty($userType))
+    $userType='Home';?>
 <ul class="nav nav-pills nav-stacked">
-    <li class="active"><a href="#">Home</a></li>
+    
+    <li class="active"><a href="<?php echo site_url($userType.'/index'); ?>">Home</a></li>
     <li><a href="<?php echo site_url('Home/GnrateResult') ?>">Genetate Result</a></li>
     <?php
     if ($userType == 'Addministration' || $userType == 'Admin') {

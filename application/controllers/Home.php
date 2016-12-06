@@ -67,7 +67,7 @@ class Home extends CI_Controller {
     function getSearchResult() {
         $this->load->model('validation', 'vi');
         //$daa = $this->input->post('content');
-        $daa=1611103;
+        $daa = 1611103;
         $res = $this->vi->getData($daa);
         echo '<table class="table table-responsive">'
         . '<tr>'
@@ -78,17 +78,38 @@ class Home extends CI_Controller {
         . '</tr>';
         foreach ($res as $r) {
             echo '<tr>'
-            . '<td>'.$r->roll.'</td>'
-            . '<td>'.$r->registration_no.'</td>'
-            . '<td>'.$r->firstName.' '.$r->midName.' '.$r->lastName.'</td>'
-            . "<td><a href='". site_url('Student\View\\'.$r->roll)."'>view</a></td>"
+            . '<td>' . $r->roll . '</td>'
+            . '<td>' . $r->registration_no . '</td>'
+            . '<td>' . $r->firstName . ' ' . $r->midName . ' ' . $r->lastName . '</td>'
+            . "<td><a href='" . site_url('Student\View\\' . $r->roll) . "'>view</a></td>"
             . "</tr>";
         }
         echo '</table>';
     }
-    
-    
-    function GnrateResult(){
-        
+
+    function GnrateResult() {
+        $this->load->view('header', ['title' => 'Generate Result']);
+        $data['left'] = 'Menu';
+        $data['center'] = 'ResultFrm';
+        $data['user'] = $this->session->userdata('id');
+        $data['userType'] = $this->session->userdata('type');
+        $this->load->model('Accadmics', 'ad');
+        $data['sem'] = $this->ad->getSem();
+        $this->load->view('index', $data);
+        $this->load->view('footer');
     }
+
+    function Result() {
+        $this->load->view('header', ['title' => 'Result']);
+        $data['left'] = 'menu';
+        $data['center'] = 'Result';
+        $data['user'] = $this->session->userdata('id');
+        $data['userType'] = $this->session->userdata('type');
+        $this->load->model('Accadmics', 'ad');
+        $info = $this->input->get('stdRoll');
+        $data['result']=$this->ad->getResult($info, $this->input->get('stdSem'));
+        $this->load->view('index', $data);
+        $this->load->view('footer');
+    }
+
 }
