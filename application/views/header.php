@@ -32,6 +32,13 @@ echo doctype('html5');
                 #rht_panel{
                     display: none;
                 }
+                
+                #mid{
+                    margin: 0;
+                }
+                *{
+                    margin: 0;
+                }
             }
             .navbar {
                 background-color:rgb(64, 64, 64);

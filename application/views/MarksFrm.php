@@ -68,7 +68,7 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                         <label>Obtained Marks</label>
-                        <input type="number" max="100" min="0" name="mrks" class="form-control"> 
+                        <input type="number" max="100" min="0" name="mrks" class="form-control" required="required"> 
                     </div>
                 </div>
             </div>
