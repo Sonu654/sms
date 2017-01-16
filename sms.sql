@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 14, 2016 at 05:57 PM
+-- Generation Time: Dec 12, 2016 at 06:02 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -3055,7 +3055,7 @@ CREATE TABLE `sms_examinition` (
 
 INSERT INTO `sms_examinition` (`exam_id`, `exam_name`) VALUES
 ('ex03', 'External'),
-('ex01', 'Internal 1'),
+('ex01', 'Internal I'),
 ('ex02', 'Internal II');
 
 -- --------------------------------------------------------
@@ -3094,7 +3094,8 @@ CREATE TABLE `sms_login_info` (
 --
 
 INSERT INTO `sms_login_info` (`user_id`, `PASS`, `type_id`) VALUES
-('admin', 'admin', 'u99');
+('admin', 'admin', 'u99'),
+('suraj', 'suraj', 'u01');
 
 -- --------------------------------------------------------
 
@@ -3117,7 +3118,34 @@ CREATE TABLE `sms_marks` (
 INSERT INTO `sms_marks` (`roll`, `sem_id`, `exam_id`, `sub_id`, `marks`) VALUES
 (1611103, '3', 'ex01', 'MCA301', 19),
 (1611103, '3', 'ex01', 'MCA302', 17),
-(1611103, '3', 'ex01', 'MCA303', 21);
+(1611103, '3', 'ex01', 'MCA303', 21),
+(1611103, '3', 'ex01', 'MCA304', 23),
+(1611103, '3', 'ex01', 'MCA305', 21),
+(1611103, '3', 'ex01', 'MCA306', 26),
+(1611103, '3', 'ex02', 'MCA301', 26),
+(1611103, '3', 'ex02', 'MCA302', 23),
+(1611103, '3', 'ex02', 'MCA303', 25),
+(1611103, '3', 'ex02', 'MCA304', 25),
+(1611103, '3', 'ex02', 'MCA305', 23),
+(1611103, '3', 'ex02', 'MCA306', 28),
+(1611103, '3', 'ex03', 'MCA301', 52),
+(1611103, '3', 'ex03', 'MCA302', 48),
+(1611103, '3', 'ex03', 'MCA303', 49),
+(1611103, '3', 'ex03', 'MCA304', 49),
+(1611103, '3', 'ex03', 'MCA305', 49),
+(1611103, '3', 'ex03', 'MCA306', 51),
+(1611103, '3', 'ex03', 'MCA311', 41),
+(1611103, '3', 'ex03', 'MCA312', 65),
+(1611103, '3', 'ex03', 'MCA313', 55),
+(1611103, '3', 'ex03', 'MCA314', 49),
+(1611104, '3', 'ex01', 'MCA301', 25),
+(1611104, '3', 'ex01', 'MCA302', 23),
+(1611104, '3', 'ex02', 'MCA301', 24),
+(1611104, '3', 'ex02', 'MCA302', 21),
+(1611104, '3', 'ex03', 'MCA301', 49),
+(1611104, '3', 'ex03', 'MCA302', 47),
+(1611104, '3', 'ex03', 'MCA311', 41),
+(1611104, '3', 'ex03', 'MCA312', 49);
 
 -- --------------------------------------------------------
 
@@ -3212,7 +3240,7 @@ CREATE TABLE `sms_student` (
   `std_img_path` varchar(25) DEFAULT NULL,
   `fatherName` varchar(20) DEFAULT NULL,
   `motherName` varchar(20) DEFAULT NULL,
-  `father_contacr` varchar(10) DEFAULT NULL,
+  `father_contact` varchar(10) DEFAULT NULL,
   `email` varchar(30) DEFAULT NULL,
   `contact` varchar(10) DEFAULT NULL,
   `cat_id` char(3) DEFAULT NULL,
@@ -3225,8 +3253,10 @@ CREATE TABLE `sms_student` (
 -- Dumping data for table `sms_student`
 --
 
-INSERT INTO `sms_student` (`roll`, `registration_no`, `enroll_no`, `firstName`, `midName`, `lastname`, `session`, `std_img_path`, `fatherName`, `motherName`, `father_contacr`, `email`, `contact`, `cat_id`, `dob`, `gen_id`, `course_id`) VALUES
-(1611103, '201600521700', '152451', 'Suraj', NULL, 'Sanwal', '2016', 'suraj.jpg', 'P C Sanwal', 'Jiwanti Sanwal', '9412164988', 'sonusanwal65@gmail.com', '9760843156', 'ct1', '1994-05-05', 'g1', 'MCA');
+INSERT INTO `sms_student` (`roll`, `registration_no`, `enroll_no`, `firstName`, `midName`, `lastname`, `session`, `std_img_path`, `fatherName`, `motherName`, `father_contact`, `email`, `contact`, `cat_id`, `dob`, `gen_id`, `course_id`) VALUES
+(1611103, '201600521700', '152451', 'Suraj', NULL, 'Sanwal', '2016', 'suraj.jpg', 'P C Sanwal', 'Jiwanti Sanwal', '9412164988', 'sonusanwal65@gmail.com', '9760843156', 'ct1', '1994-05-05', 'g1', 'MCA'),
+(1611104, '12648252', '456221', 'Akanksha', NULL, 'Saxena', '2016', '\\\\\\', 'abc', 'xyz', '5644654', 'gdfdgsa', '354765765', 'ct1', '2016-11-23', 'g2', 'MCA'),
+(1611105, '20160032542', '', 'Soniya', '', 'Bisht', '2016', '//', 'Narayan Singh Bisht', 'Janki Bisht', '4841236', 'soniyabisht2222@gmail.com', '9760843156', 'ct1', '1997-03-04', 'g2', 'MCA');
 
 -- --------------------------------------------------------
 
@@ -3371,7 +3401,7 @@ CREATE TABLE `sms_university` (
 
 INSERT INTO `sms_university` (`uni_id`, `uni_name`, `address`, `vc_name`, `contact`) VALUES
 ('KU', 'Kumaun University', 'Nainital', 'Prof. H.S.Dhami', '248915'),
-('UKTECH', 'Uttarakhand Technical Universi', 'Dehradun', 'abc', '546245');
+('UKTECH', 'Uttarakhand Technical Universi', 'Dehradun', 'Harish Rawat', '546245');
 
 -- --------------------------------------------------------
 
@@ -3389,7 +3419,7 @@ CREATE TABLE `sms_user_type` (
 --
 
 INSERT INTO `sms_user_type` (`type_id`, `type`) VALUES
-('u01', 'Addmission'),
+('u01', 'Addministration'),
 ('u02', 'Exam'),
 ('u03', 'Student'),
 ('u04', 'Faculty'),
